@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>غذای شانسی</title>
+  <style>
+    body { font-family: Tahoma; text-align: center; direction: rtl; padding: 30px; background: #fff0e1; }
+    h1 { color: #d35400; }
+    button { padding: 12px 25px; font-size: 18px; background: #e67e22; color: white; border: none; border-radius: 10px; cursor: pointer; }
+    #food { margin-top: 30px; font-size: 22px; color: #a04000; }
+  </style>
+</head>
+<body>
+  <h1>غذای شانسی</h1>
+  <button onclick="getFood()">غذای امروز من چیست؟</button>
+  <div id="food"></div>
+
+  <script>
+    const foods = [
+      "قرمه سبزی",
+      "کباب کوبیده",
+      "جوجه کباب",
+      "ماکارونی",
+      "عدس پلو",
+      "دلمه برگ مو",
+      "خوراک مرغ",
+      "چلو کباب",
+      "شامی",
+      "خورشت فسنجان",
+      "باقالی پلو",
+      "کوفته تبریزی"
+    ];
+
+    function getFood() {
+      const randomIndex = Math.floor(Math.random() * foods.length);
+      const food = foods[randomIndex];
+      document.getElementById("food").innerText = "امروز غذای شما: " + food;
+    }
+  </script>
+</body>
+</html>
